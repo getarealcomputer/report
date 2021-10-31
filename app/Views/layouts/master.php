@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= $this->include('layouts/head') ?>
   </head>
-  <body class="hold-transition sidebar-mini layout-fixed">
+  <body class="dark-mode hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
       <?= $this->include('layouts/navbar') ?>
       <?= $this->include('layouts/sidebar') ?>

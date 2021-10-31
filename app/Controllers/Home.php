@@ -1,12 +1,11 @@
-<?php
+<?php 
 
 namespace App\Controllers;
 
-class Home extends BaseController
+class Home extends \IonAuth\Controllers\Auth
 {
-    public function index()
-    {
-        $data['title']="Flashsoft | eRapor";
-        return view('pages/login', $data);
-    }
+  public function index()
+  {
+    return view('index');
+  }
 }

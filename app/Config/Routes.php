@@ -31,8 +31,26 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->group('dashboard', ['namespace' => 'App\Controllers'], function ($routes) {
+  $routes->get('/', 'Dashboard::index');
 
+  $routes->group('users', ['namespace' => 'App\Controllers'], function ($routes) {
+    $routes->get('/', 'Users::index');
+    $routes->add('create', 'Users::createUser');
+    $routes->add('edit/(:num)', 'Users::edit/$1');
+    $routes->add('activate/(:num)', 'Users::activate/$1');
+    $routes->add('deactivate/(:num)', 'Users::deactivate/$1');
+    $routes->add('edit_group/(:num)', 'Users::editGroup/$1');
+    $routes->add('create_group', 'Users::createGroup');
+  });
+
+  $routes->group('informations', ['namespace' => 'App\Controllers'], function ($routes) {
+    $routes->get('/', 'Informations::index');
+    $routes->get('displayPhpInfo', 'Informations::displayPhpInfo');
+    $routes->add('exportDatabase', 'Informations::exportDatabase');
+    $routes->post('sendEmailForTest', 'Informations::sendEmailForTest');
+	});
+});
 /*
  * --------------------------------------------------------------------
  * Additional Routing

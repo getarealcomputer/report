@@ -34,7 +34,7 @@ class Autoload extends AutoloadConfig
      *```
      *   $psr4 = [
      *       'CodeIgniter' => SYSTEMPATH,
-     *       'App'	       => APPPATH
+     *       'App'	   => APPPATH
      *   ];
      *```
      *
@@ -64,7 +64,10 @@ class Autoload extends AutoloadConfig
      *
      * @var array<string, string>
      */
-    public $classmap = [];
+    public $classmap = [
+      //'IonAuth' => ROOTPATH . 'vendor/benedmunds/codeigniter-ion-auth' ;
+      //'Admin' => ROOTPATH . 'ci4-admin' ;
+    ];
 
     /**
      * -------------------------------------------------------------------

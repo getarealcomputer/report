@@ -14,8 +14,11 @@
           <img src="<?= base_url('assets/adminlte3') ?>/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
+        <?php //if () : ?>
           <a href="#" class="d-block"><?php echo "\$username" ?></a>
-          <a href="<?php echo base_url('/auth/logout') ?>" class="d-block">Log Out</a>
+        <?php //else : ?>
+          <!--login link-->
+        <?php //endif; ?>
         </div>
       </div>
 
@@ -25,7 +28,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="dashboard" class="nav-link">
+            <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -34,13 +37,13 @@
           </li>
           <li class="nav-header">DATA MANAGEMENT</li>
           <li class="nav-item">
-            <a href="<?= base_url('/dashboard/users') ?>" class="nav-link">
+            <a href="<?= base_url('users') ?>" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>Users</p>
             </a>
           </li>
           <li class="nav-item">
-            <a href="<?= base_url('/dashboard/students') ?>" class="nav-link">
+            <a href="<?= base_url('students') ?>" class="nav-link">
               <i class="nav-icon fas fa-user-graduate"></i>
               <p>Students</p>
             </a>
