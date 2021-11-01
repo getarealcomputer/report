@@ -14,10 +14,7 @@ class Auth extends \IonAuth\Controllers\Auth
 
   public function index()
   {
-    if (!$this->ionAuth->loggedIn()) {
-      return redirect()->to('auth/login');
-    } 
-    return redirect()->to('dashboard');
+    // do something
   }
 
   /**
