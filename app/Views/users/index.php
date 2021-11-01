@@ -19,8 +19,9 @@
   <script src="<?= base_url('assets/adminlte3') ?>/plugins/chart.js/Chart.min.js"></script>
 
   <!-- PAGE SCRIPTS -->
-  <script src="<?= base_url('assets/adminlte3') ?>/js/pages/dashboard2.js"></script>
+
 <?= $this->endSection() ?>
+
 <?php echo $this->section('content'); ?>
     <div class="col-12">
       <?php if(session()->has("success")): ?>
@@ -32,8 +33,8 @@
         <div class="card-header">
           <div class="card-title">Users Table</div> 
           <div class="card-tools">
-            <a href="<?= route_to('users.add') ?>" class="btn btn-sm btn-success">
-              <i class="fas fa-plus"></i> Tambah Data
+            <a href="" class="btn btn-sm btn-success">
+              <i class="fas fa-plus"></i> Add
             </a>
           </div>
         </div>

@@ -6,7 +6,7 @@ class Home extends \IonAuth\Controllers\Auth
 {
   public function index()
   {
-    $data['title'] = 'eReport | FlashSoft';
+    $data['title'] = 'Front Page | FlashSoft';
     return view('index', $data);
   }
 }

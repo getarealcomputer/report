@@ -14,7 +14,7 @@
           <img src="<?= base_url('assets/adminlte3') ?>/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block"><?php echo "\$username" ?></a>
+          <a href="#" class="d-block"><?php echo session('message'); ?></a>
           <a href="<?php echo base_url('/auth/logout') ?>" class="d-block">Log Out</a>
         </div>
       </div>
@@ -25,7 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item">
-            <a href="dashboard" class="nav-link">
+            <a href="<?= base_url('/dashboard') ?>" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard

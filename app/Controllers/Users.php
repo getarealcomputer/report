@@ -12,7 +12,7 @@ class Users extends Controller
         $model = new UsersModel;
         $data['model'] = $model->findAll();
 
-        $data['title'] = "Flashsoft | eRapor";
+        $data['title'] = "User Management | eReport";
         $data['breadcrumb_title'] = "Users";
         $data['breadcrumb'] = [
           [    
@@ -31,7 +31,6 @@ class Users extends Controller
       $rules = [
         'username' => "required|min_length[16]|max_length[16]",
         'passphrase' => 'required|min_length[9]|max_length[25]',
-        'role' => 'required',
         'email' => 'required|valid_email',
       ];
 

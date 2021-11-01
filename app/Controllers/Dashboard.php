@@ -9,7 +9,7 @@ class Dashboard extends Controller
   public function index()
   {
     $dynamicElement = [
-      'title' => 'Report',
+      'title' => 'Dashboard | eReport',
       'breadcrumb_title' => 'Dashboard',
       'breadcrumb' => [
         [
